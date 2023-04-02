@@ -17,6 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlServerSource",
+						"sqlReaderQuery": "SELECT rno,name,mark1,mark2,mark3,mark4, (mark1+mark2+mark3+mark4) total from student",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
