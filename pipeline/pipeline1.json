@@ -28,11 +28,48 @@
 					"variableName": "mainvariable",
 					"value": "Hi"
 				}
+			},
+			{
+				"name": "If Condition1",
+				"type": "IfCondition",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@equals(variables('mainvariable') , 'main')",
+						"type": "Expression"
+					},
+					"ifFalseActivities": [
+						{
+							"name": "Set variable3",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "mainvariable",
+								"value": "false condition acheived"
+							}
+						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "Set variable2",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "mainvariable",
+								"value": "True condition acheived"
+							}
+						}
+					]
+				}
 			}
 		],
 		"variables": {
 			"mainvariable": {
-				"type": "String"
+				"type": "String",
+				"defaultValue": "main"
 			}
 		},
 		"annotations": []
