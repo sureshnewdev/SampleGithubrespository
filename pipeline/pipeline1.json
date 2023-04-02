@@ -30,39 +30,20 @@
 				}
 			},
 			{
-				"name": "If Condition1",
-				"type": "IfCondition",
-				"dependsOn": [],
+				"name": "skipped variable",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
-					"expression": {
-						"value": "@equals(variables('mainvariable') , 'main')",
-						"type": "Expression"
-					},
-					"ifFalseActivities": [
-						{
-							"name": "Set variable3",
-							"type": "SetVariable",
-							"dependsOn": [],
-							"userProperties": [],
-							"typeProperties": {
-								"variableName": "mainvariable",
-								"value": "false condition acheived"
-							}
-						}
-					],
-					"ifTrueActivities": [
-						{
-							"name": "Set variable2",
-							"type": "SetVariable",
-							"dependsOn": [],
-							"userProperties": [],
-							"typeProperties": {
-								"variableName": "mainvariable",
-								"value": "True condition acheived"
-							}
-						}
-					]
+					"variableName": "skipped",
+					"value": "yes skipped"
 				}
 			}
 		],
@@ -70,6 +51,9 @@
 			"mainvariable": {
 				"type": "String",
 				"defaultValue": "main"
+			},
+			"skipped": {
+				"type": "String"
 			}
 		},
 		"annotations": []
