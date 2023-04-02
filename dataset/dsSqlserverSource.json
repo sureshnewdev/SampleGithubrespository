@@ -1,0 +1,51 @@
+{
+	"name": "dsSqlserverSource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lsSqlserver",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "rno",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "name",
+				"type": "varchar"
+			},
+			{
+				"name": "mark1",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "mark2",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "mark3",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "mark4",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "total",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "student"
+		}
+	}
+}
